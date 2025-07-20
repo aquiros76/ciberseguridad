@@ -1,53 +1,62 @@
-Para iniciar la maquina descargamos el fichero .ovpn y lo ejecutamos con el comando:
+Para iniciar la máquina descargamos el fichero `.ovpn` y lo ejecutamos con el comando:  
 `$ sudo openvpn "nombre del fichero"`
 
-Tarea 1
-Qué representa el acrónimo VM?
-<span style="color: lime;">Virtual machine</span>
+### Tarea 1  
+**¿Qué representa el acrónimo VM?**  
+*Virtual machine*
 
-Tarea 2
-Qué herramienta utilizamos para interactuar con el sistema operativo con el fin de emitir comandos a través de la línea de comandos, como la que iniciará nuestra conexión VPN? También se conoce como consola o shell.
-<span style="color: lime;">Terminal</span>
+### Tarea 2  
+**¿Qué herramienta utilizamos para interactuar con el sistema operativo con el fin de emitir comandos a través de la línea de comandos, como la que iniciará nuestra conexión VPN? También se conoce como consola o shell.**  
+*Terminal*
 
-Tareas 3
-Qué servicio usamos para formar nuestra conexión VPN en laboratorios HTB?
-<span style="color: lime;">openvpn</span>
+### Tarea 3  
+**¿Qué servicio usamos para formar nuestra conexión VPN en laboratorios HTB?**  
+*OpenVPN*
 
-Tareas 4
-Qué herramienta usamos para probar nuestra conexión al objetivo con una solicitud de eco ICMP?
-<span style="color: lime;">ping</span>
+### Tarea 4  
+**¿Qué herramienta usamos para probar nuestra conexión al objetivo con una solicitud de eco ICMP?**  
+*ping*
 
-Tareas 5
-Cuál es el nombre de la herramienta más común para encontrar puertos abiertos en un objetivo?
-<span style="color: lime;">nmap</span>
+### Tarea 5  
+**¿Cuál es el nombre de la herramienta más común para encontrar puertos abiertos en un objetivo?**  
+*nmap*
 
-Tareas 6
-Qué servicio identificamos en el puerto 23/tcp durante nuestros escáneres?
-<span style="color: lime;">telnet</span>
+### Tarea 6  
+**¿Qué servicio identificamos en el puerto 23/tcp durante nuestros escáneres?**  
+*telnet*
 
-Tareas 7
-Qué nombre de usuario es capaz de conectarse al objetivo sobre telnet con una contraseña en blanco?
-<span style="color: lime;">root</span>
+### Tarea 7  
+**¿Qué nombre de usuario es capaz de conectarse al objetivo sobre telnet con una contraseña en blanco?**  
+*root*
 
-Envío de bandera
-Enviar bandera de raíz
-<span style="color: lime;">b40abdfe23665f766f9c61ecba8a4c19</span>
+---
+
+### Envío de bandera  
+Enviar bandera de raíz:  
+~~`b40abdfe23665f766f9c61ecba8a4c19`~~
+
+---
 
 ### Iniciamos la máquina
-Hacemos un ifconfing para ver que tenemos conexión con la máquina victima.
-![Ping a la IP de la máquina víctima](Imagenes/Ping.png)
 
-![[2025-07-14_14-41.png]] 
-Hacemos ping a la IP de la maquina victima 
+Hacemos un `ifconfig` para ver que tenemos conexión con la máquina víctima.  
 
-![[Imagenes/2025-07-14_14-55.png]]
-Ahora vamos a ver que puertos tiene abiertos con la herramienta nmap
+![Ping a la máquina víctima](https://raw.githubusercontent.com/aquiros76/ciberseguridad/main/Imagenes/2025-07-14_14-41.png)
 
-![[2025-07-14_14-59.png]]
-Vemos que tiene abierto el puerto 23, un servicio telnet.
-Nos conectamos al servicio telnet y nos pide usuario y contraseña.
-Probamos las combinaciones mas comunes como admin o root, por las preguntas podemos intuir que el login es root.
+Ahora vamos a ver qué puertos tiene abiertos con la herramienta `nmap`:
 
-![[2025-07-14_15-05.png]]
-Ahora solo tenemos que hacer un cat sobre el fichero flag.txt
-![[2025-07-14_15-08.png]]
+![Escaneo con nmap](https://raw.githubusercontent.com/aquiros76/ciberseguridad/main/Imagenes/2025-07-14_14-55.png)
+
+Vemos que tiene abierto el puerto 23, un servicio Telnet.  
+Nos conectamos al servicio Telnet y nos pide usuario y contraseña.
+
+![Conexión Telnet](https://raw.githubusercontent.com/aquiros76/ciberseguridad/main/Imagenes/2025-07-14_14-59.png)
+
+Probamos las combinaciones más comunes como `admin` o `root`, por las preguntas podemos intuir que el login es `root`.
+
+![Lectura de flag.txt](https://raw.githubusercontent.com/aquiros76/ciberseguridad/main/Imagenes/2025-07-14_15-05.png)
+
+Ahora solo tenemos que hacer un `cat` sobre el fichero `flag.txt`:
+
+![Flag capturada](https://raw.githubusercontent.com/aquiros76/ciberseguridad/main/Imagenes/2025-07-14_15-08.png)
+
