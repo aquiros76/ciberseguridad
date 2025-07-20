@@ -35,11 +35,12 @@ Enviar bandera de raíz
 
 ### Iniciamos la máquina
 Hacemos un ifconfing para ver que tenemos conexión con la máquina victima.
+![Ping a la IP de la máquina víctima](Imagenes/ping.png)
 
 ![[2025-07-14_14-41.png]] 
 Hacemos ping a la IP de la maquina victima 
 
-![[2025-07-14_14-55.png]]
+![[Imagenes/2025-07-14_14-55.png]]
 Ahora vamos a ver que puertos tiene abiertos con la herramienta nmap
 
 ![[2025-07-14_14-59.png]]
